@@ -60,7 +60,10 @@ def listings(request, category1, category2, category3, page = 1):
         eventsList[-1].name = i['name']['text']
         eventsList[-1].id = i['id']
         eventsList[-1].url = i['url']
-        eventsList[-1].description = i['description']['text']
+        try:
+            eventsList[-1].description = i['description']['text']
+        except:
+             eventsList[-1].description = "No description available"
         eventsList[-1].resource_uri = i['resource_uri']
     
         
