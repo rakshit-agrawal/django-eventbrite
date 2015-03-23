@@ -1,7 +1,26 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'topthree/style.css' %}" />
+    <title>Eventbrite Top Three Category search</title>
+</head>
+
+<body>
+
+<header>
+<h1>Eventbrite listings</h1>
+</header>
+<h4>
+
+<h3>Please select your favorite top three categories</h3>
 <form action="{% url 'topthree:index' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit" />
 </form>
 
+</body>
+
+</html>

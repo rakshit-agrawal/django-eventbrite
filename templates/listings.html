@@ -1,12 +1,29 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'topthree/style.css' %}" />
+    <title>Eventbrite Listings</title>
+</head>
+
+<body>
+<header>
+<h1>Eventbrite listings</h1>
+</header>
+<h4>
+Following are the top listings for selected categories:
+</h4>
+
+<div id = "listings">
 <ul>
 
 {% for i in eventsList %}
-<li><a href="{{i.url}}">{{i.name}}</a></li>
+<li class="listingItem"><a href="{{i.url}}">{{i.name}}</a></li>
 {% endfor %}
 
 </ul>
-
+</div>
 
 <footer>
 {% if prev_page > 0 %}
@@ -14,3 +31,7 @@
 {% endif %}
 <a href="{{next_page_url}}">Next</a>
 </footer>
+
+</body>
+
+</html>
