@@ -1,0 +1,16 @@
+
+<ul>
+
+{% for i in eventsList %}
+<li><a href="{{i.url}}">{{i.name}}</a></li>
+{% endfor %}
+
+</ul>
+
+
+<footer>
+{% if prev_page > 0 %}
+<a href="{{prev_page_url}}">Previous</a>
+{% endif %}
+<a href="{{next_page_url}}">Next</a>
+</footer>
