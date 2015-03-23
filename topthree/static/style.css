@@ -1,0 +1,8 @@
+
+#listings ul {
+	list-style: none;
+}
+
+.listingItems li {
+	padding-bottom: "15px";
+}
